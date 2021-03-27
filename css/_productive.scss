@@ -1,0 +1,44 @@
+.productive {
+  background: $mainBg;
+  padding: 69px 69px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(large) {
+    .product {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+  .product img {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .product h1 {
+    font-size: 2em;
+    padding-bottom: 13px;
+  }
+  .product p {
+    font-size: 0.8em;
+    padding-bottom: 16px;
+  }
+
+  .product a {
+    color: $ctaCyan;
+    background-image: url(/images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 25px;
+    border-bottom: 1px solid $ctaBlue;
+
+    &:hover {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}

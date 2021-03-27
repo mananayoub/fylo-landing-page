@@ -1,0 +1,78 @@
+.footer {
+  background: $footerBg;
+  padding: 80px;
+  display: grid;
+  row-gap: 30px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'logo . . . .'
+    'location . . . .'
+    'contact . . . . '
+    'link . . . .'
+    'more-links . . . .'
+    'social-icons . . . .';
+
+  @include breakpoint(large) {
+    padding-top: 200px;
+    grid-template-columns: 4fr 3fr 1fr 1fr 2fr;
+    column-gap: 70px;
+    grid-template-areas:
+      'logo . . . .'
+      'location contact link more-links social-icons';
+  }
+
+  &-logo {
+    grid-area: logo;
+    margin-bottom: 35px;
+  }
+
+  &-location {
+    grid-area: location;
+    display: grid;
+    grid-template-columns: 5% 95%;
+
+    & span {
+      padding-left: 30px;
+      font-size: 14px;
+    }
+  }
+
+  &-contact {
+    grid-area: contact;
+
+    & p {
+      margin-bottom: 16px;
+    }
+
+    & span {
+      padding-left: 30px;
+    }
+  }
+
+  &-link {
+    grid-area: link;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    & a {
+      margin-bottom: 12px;
+    }
+  }
+
+  &-more-links {
+    grid-area: more-links;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    & a {
+      margin-bottom: 10px;
+    }
+  }
+
+  .social-icons {
+    grid-area: social-icons;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

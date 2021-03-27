@@ -1,0 +1,29 @@
+.features {
+  background: $mainBg;
+  padding: 16px;
+
+  .feature-grid {
+    max-width: 880px;
+    margin: auto;
+
+    @include breakpoint(medium) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em;
+    }
+  }
+
+  .feature {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .feature h3 {
+    padding: 20px;
+    font-weight: 700;
+  }
+
+  .feature p {
+    padding-bottom: 48px;
+  }
+}

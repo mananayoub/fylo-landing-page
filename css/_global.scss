@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+html {
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  position: relative;
+}
+
+a,
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  font-family: $font-body;
+  font-size: calc(16px + 0.75vw);
+  line-height: 1.3;
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sb {
+  justify-content: space-between;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-title;
+}
+
+section {
+  padding: 0 27px 83px;
+}
+
+button {
+  border: 0;
+  color: #fff;
+  background: linear-gradient(to right, $ctaCyan, $ctaBlue);
+  font-size: 0.65em;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 285px;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(to right, $ctaBlue);
+  }
+}
+
+.attribution {
+  background: $footerBg;
+  font-size: 11px;
+  text-align: center;
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}
